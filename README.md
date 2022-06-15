@@ -24,3 +24,15 @@ history | sort -ur -k2 | grep 'sudo.*/tmp/file1$' | sed 's/:/ /'
 1. pipe the `history` output to `sort -ur -k2` that will remove duplicates based on the second column/key (ignoring line numbers, checking only unique commands) and sort in descending order.
 2. pipe the result of the previous command to `grep 'sudo.*/tmp/file1$'` that will find the lines that contain the string `sudo` and ending with `/tmp/file1`.
 3. pipe the result of the previous command to `sed 's/:/ /'` that will replace the colon `:` with a space.
+
+# Commands
+
+```bash
+docker build . -t nomangul/node-web-app
+```
+```bash
+docker run -p 49160:8000 -d nomangul/node-web-app
+```
+```bash
+curl -i localhost:49160/api/health
+```
